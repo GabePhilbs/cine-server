@@ -1,3 +1,5 @@
+
+// Blakes stuff, just for reference
 const express = require('express')  
 const app = express()  
 const port = 8080
@@ -16,6 +18,30 @@ app.get('/', function(request, response) {
   response.send('Hello from Express!');
   console.log('route succesfully getting hit');
 });
+
+// my actual server
+
+//trying to allow cross reference from other domains(delete this section when you upload this)
+// http.createServer(function (req, res) {
+//     res.setHeader("Access-Control-Allow-Origin", "*");
+//     res.writeHead(200, {'Content-Type': 'text/plain'});
+//     res.end('Hello World\n');
+// }).listen(8010);
+// end of the local host section (that will be deleted)
+
+//trying to import array from json -  did not work
+// var directors = [];
+
+// var jf = require('fs');
+// jf.readFile('directors.json', function(err, obj) {
+// 	//for(i=0; i <obj.length; i++){}
+// 	directors = obj;
+// 	//directors = JSON.stringify( obj );
+//   // obj contains JSON data
+// });
+ 
+
+
 
 
 var directors =[
@@ -146,11 +172,6 @@ var films = [
 	img: "images/outrage3.jpg",
 	decade:2010
 	},
-
-
-
-
-
 
 ]
 
