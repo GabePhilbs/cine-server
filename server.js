@@ -181,8 +181,18 @@ var films = [];
 fs.readFile('films.json', 'utf8', function (err, data){
       if(err) throw err;
       films = JSON.parse(data);
+      function getdir(films){for(var i = 0; i< films.length; i++){
+			var dir = directors[films[i].director];
+			films[i].director = dir;
+			}};
+		getdir(films);	
+      
      });
 
+// for(var i = 0; i< films.legth; i++){
+// 	var dir = directors[films[i].director];
+// 	films[i].director = dir;
+// }
 
 
 
