@@ -1,11 +1,12 @@
 {
-  "name": "blakes-first-app",
+  "name": "japanese-cinema-archive-app",
   "version": "1.0.0",
   "description": "this is a starter project for the loyola class",
   "main": "server.js",
-  "author": "Blake Butterworth",
+  "author": "Gabe Philbois",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "mongoose": "^4.0.8"
   }
 }

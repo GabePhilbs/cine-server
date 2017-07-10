@@ -1,10 +1,37 @@
 
 // Blakes stuff, just for reference
 const express = require('express')  
-const app = express()  
-const port = 8080
+const app = express() ; 
+const port = 8080;
 const fs = require("fs");
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
+// creating schema for example db
+Schema = new mongoose.Schema({
+	id : String,
+	title: String,
+	completed: Boolean
+
+
+}),
+
+Todo = mongoose.model('Todo', Schema);
+
+
+// when the project is live on heroku use MONGO_URI instead of the url 
+// and password/ username. If you push to github like this, anyone 
+//write on your  db
+mongoose.connect('', function (error) {
+    if (error) console.error(error);
+    else console.log('mongo connected');
+});
+
+
+
+
+
+// test stuff
 app.listen(port, function(err) {  
   if (err) {
     return console.log('something bad happened', err)
