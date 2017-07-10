@@ -72,55 +72,55 @@ app.get('/', function(request, response) {
 
 
 
-var directors =[
+// var directors =[
 
-	{
-		name: 'Yasujirō Ozu',
-		about:'Yasujirō Ozu was a Japanese film director and screenwriter. He began his career during the era of silent films. Ozu first made a number of short comedies, before turning to more serious themes in the 1930s.'
-	},
+// 	{
+// 		name: 'Yasujirō Ozu',
+// 		about:'Yasujirō Ozu was a Japanese film director and screenwriter. He began his career during the era of silent films. Ozu first made a number of short comedies, before turning to more serious themes in the 1930s.'
+// 	},
 
-	{
-		name: 'Akira Kurosawa',
-		about:'Akira Kurosawa was a Japanese film director and screenwriter. Regarded as one of the most important and influential filmmakers in the history of cinema, he directed 30 films in a career spanning 57 years'
-	},
+// 	{
+// 		name: 'Akira Kurosawa',
+// 		about:'Akira Kurosawa was a Japanese film director and screenwriter. Regarded as one of the most important and influential filmmakers in the history of cinema, he directed 30 films in a career spanning 57 years'
+// 	},
 
-	{
-		name: 'Ishirō Honda',
-		about:'Ishirō Honda, sometimes miscredited in foreign releases as "Inoshiro Honda", was a Japanese film director.'
-	},
+// 	{
+// 		name: 'Ishirō Honda',
+// 		about:'Ishirō Honda, sometimes miscredited in foreign releases as "Inoshiro Honda", was a Japanese film director.'
+// 	},
 
-	{
-		name: 'Seijun Suzuki',
-		about:'Seijun Suzuki, born Seitaro Suzuki, was a Japanese filmmaker, actor, and screenwriter. His films are known for their jarring visual style, irreverent humour, nihilistic cool and entertainment-over-logic sensibility.'
-	},
+// 	{
+// 		name: 'Seijun Suzuki',
+// 		about:'Seijun Suzuki, born Seitaro Suzuki, was a Japanese filmmaker, actor, and screenwriter. His films are known for their jarring visual style, irreverent humour, nihilistic cool and entertainment-over-logic sensibility.'
+// 	},
 
-	{
-		name: 'Nobuhiko Obayashi',
-		about:'Nobuhiko Obayashi is a Japanese director, screenwriter and editor of films and television advertisements who is well known for his surreal visual style.'
-	},
+// 	{
+// 		name: 'Nobuhiko Obayashi',
+// 		about:'Nobuhiko Obayashi is a Japanese director, screenwriter and editor of films and television advertisements who is well known for his surreal visual style.'
+// 	},
 
-	{
-		name: 'Juzo Itami',
-		about:'Juzo Itami, born Yoshihiro Ikeuchi, was a Japanese actor, screenwriter and film director. He directed ten films, all of which he wrote himself.'
-	},
+// 	{
+// 		name: 'Juzo Itami',
+// 		about:'Juzo Itami, born Yoshihiro Ikeuchi, was a Japanese actor, screenwriter and film director. He directed ten films, all of which he wrote himself.'
+// 	},
 
-	{
-		name: 'Takashi Miike',
-		about:'Takashi Miike is a highly prolific and controversial Japanese filmmaker. He has directed over ninety theatrical, video, and television productions since his debut in 1991.'
-	},
+// 	{
+// 		name: 'Takashi Miike',
+// 		about:'Takashi Miike is a highly prolific and controversial Japanese filmmaker. He has directed over ninety theatrical, video, and television productions since his debut in 1991.'
+// 	},
 
-	{
-		name: 'Hayao Miyasaki',
-		about:'Hayao Miyazaki is a Japanese film director, producer, screenwriter, animator, author, and manga artist.'
-	},
+// 	{
+// 		name: 'Hayao Miyasaki',
+// 		about:'Hayao Miyazaki is a Japanese film director, producer, screenwriter, animator, author, and manga artist.'
+// 	},
 
-	{
-		name: 'Takeshi Kitano',
-		about:'Takeshi Kitano is a Japanese comedian, television personality, director, actor, author, and screenwriter. While he is known primarily as a comedian and TV host in his native Japan, abroad he is known almost entirely for his filmwork.'
-	}
+// 	{
+// 		name: 'Takeshi Kitano',
+// 		about:'Takeshi Kitano is a Japanese comedian, television personality, director, actor, author, and screenwriter. While he is known primarily as a comedian and TV host in his native Japan, abroad he is known almost entirely for his filmwork.'
+// 	}
 
 
-]
+// ]
 
 
 
@@ -204,18 +204,23 @@ var directors =[
 // ]
 
 var films = [];
+var directors =[];
 
-fs.readFile('films.json', 'utf8', function (err, data){
-      if(err) throw err;
-      films = JSON.parse(data);
-      function getdir(films){for(var i = 0; i< films.length; i++){
-			var dir = directors[films[i].director];
-			films[i].director = dir;
-			}};
-		getdir(films);	
-      
-     });
+fs.readFile('directors.json', 'utf8', function (err, data){
+	      if(err) throw err;
+	      directors = JSON.parse(data);
 
+	fs.readFile('films.json', 'utf8', function (err, data){
+	      if(err) throw err;
+	      films = JSON.parse(data);
+	      function getdir(films){for(var i = 0; i< films.length; i++){
+				var dir = directors[films[i].director];
+				films[i].director = dir;
+				}};
+			getdir(films);	
+	      
+	     });
+});
 // for(var i = 0; i< films.legth; i++){
 // 	var dir = directors[films[i].director];
 // 	films[i].director = dir;
