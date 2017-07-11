@@ -7,16 +7,42 @@ const fs = require("fs");
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
-creating schema for example db
-Schema = new mongoose.Schema({
+
+//creating schema for films
+filmsSchema = new mongoose.Schema({
 	id : String,
-	title: String,
-	completed: Boolean
+	name: String,
+	cast: String,
+	director: int,
+	img: String,
+	decade: int,},
+	{collection: 'films'});
 
 
-// }),
-
+//assign a functuion to it
 // Todo = mongoose.model('Todo', Schema);
+films = mongoose.model('films', filmsSchema);
+
+
+directorsSchema = new mongoose.Schema({
+
+	id: String,
+	name: String,
+	about: String}
+	{collection: 'directors'});
+
+directors = mongoose.model('directors', directorsSchema);
+
+
+
+
+
+
+
+
+
+
+
 
 
 // // when the project is live on heroku use MONGO_URI instead of the url 
@@ -69,28 +95,32 @@ app.get('/', function(request, response) {
 // });
  
 
+// THIS GETS FILMS AND DIRECTORS FROM JSON. IT WORKS
 
 
 
+// var films = [];
+// var directors =[];
 
-var films = [];
-var directors =[];
+// fs.readFile('directors.json', 'utf8', function (err, data){
+// 	      if(err) throw err;
+// 	      directors = JSON.parse(data);
 
-fs.readFile('directors.json', 'utf8', function (err, data){
-	      if(err) throw err;
-	      directors = JSON.parse(data);
-
-	fs.readFile('films.json', 'utf8', function (err, data){
-	      if(err) throw err;
-	      films = JSON.parse(data);
-	      function getdir(films){for(var i = 0; i< films.length; i++){
-				var dir = directors[films[i].director];
-				films[i].director = dir;
-				}};
-			getdir(films);	
+// 	fs.readFile('films.json', 'utf8', function (err, data){
+// 	      if(err) throw err;
+// 	      films = JSON.parse(data);
+// 	      function getdir(films){for(var i = 0; i< films.length; i++){
+// 				var dir = directors[films[i].director];
+// 				films[i].director = dir;
+// 				}};
+// 			getdir(films);	
 	      
-	     });
-});
+// 	     });
+// });
+
+//END OF JSON STUFF
+
+
 // for(var i = 0; i< films.legth; i++){
 // 	var dir = directors[films[i].director];
 // 	films[i].director = dir;
