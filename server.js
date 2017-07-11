@@ -12,13 +12,6 @@ var bodyParser = require('body-parser');
 
 
 
-
-
-
-
-
-
-
 // // when the project is live on heroku use MONGO_URI instead of the url 
 // // and password/ username. If you push to github like this, anyone 
 // //write on your  db
@@ -27,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
     else console.log('mongo connected');
 // });
 
-
+});
 
 
 
