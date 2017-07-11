@@ -18,12 +18,29 @@ var bodyParser = require('body-parser');
 // when the project is live on heroku use MONGO_URI instead of the url 
 // and password/ username. If you push to github like this, anyone 
 //write on your  db
+
+			//WHEN LIVE
+
+
 mongoose.connect(process.env.MONGODB_URI, function (error) {
     if (error) console.error(error);
     else console.log('mongo connected');
 // });
 
 });
+
+
+		//LOCAL
+// mongoose.connect(INSERT-MONGO-URL, function (error) {
+//     if (error) console.error(error);
+//     else console.log('mongo connected');
+// // });
+
+// });
+
+
+
+
 
 
 //CREATING SCHEMAS AND ASSIGNING VARIABLES
@@ -177,17 +194,17 @@ app.get('/films', function(request, response){
 });
 
 
- app.get('this-director', function(request, response){  
-	// Directors.find({"name": request.body},function(err,films){
-	// 	if(err){
-	// 		console.log('error with films find')
-	// 	}else{
-	// 		response.send(films);
-	// 	}
+//  app.get('this-director', function(request, response){  
+// 	// Directors.find({"name": request.body},function(err,films){
+// 	// 	if(err){
+// 	// 		console.log('error with films find')
+// 	// 	}else{
+// 	// 		response.send(films);
+// 	// 	}
 		
-	// })
-	console.log(request.query);
-});
+// 	// })
+// 	console.log(request.query);
+// });
 
 
 
