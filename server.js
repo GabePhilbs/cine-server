@@ -27,8 +27,12 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 
 //CREATING SCHEMAS AND ASSIGNING VARIABLES
+
+// ** when I uncomented this section, the app crashed
+// this is where the is 
 	
 				//UNCOMENT THIS !!! 2
+
 
 //creating schema for films
 filmsSchema = new mongoose.Schema({
@@ -37,7 +41,7 @@ filmsSchema = new mongoose.Schema({
 	cast: String,
 	director: String,
 	img: String,
-	decade: String,},
+	decade: String},
 	{collection: 'films'});
 
 
