@@ -177,6 +177,38 @@ app.get('/films', function(request, response){
 });
 
 
+ app.get('this-director', function(request, response){  
+	// Directors.find({"name": request.body},function(err,films){
+	// 	if(err){
+	// 		console.log('error with films find')
+	// 	}else{
+	// 		response.send(films);
+	// 	}
+		
+	// })
+	console.log(request.query);
+});
+
+
+
+
+
+
+// app.get('this-film', function(request, response){  
+// 	Films.find(function(err,films){
+// 		if(err){
+// 			console.log('error with films find')
+// 		}else{
+// 			response.send(films);
+// 		}
+		
+// 	})
+// 	console.log('films were sent');
+// });
+
+
+
+
 // END OF API REQUESTS
 
 
