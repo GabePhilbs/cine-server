@@ -10,7 +10,8 @@ var bodyParser = require('body-parser');
 
 
 
-//CONECTING TO MONGO
+//CONECTING TO MONGO 
+// ** SECTION ISOLATED, TESTED, AND WORKING
 
 			
 
@@ -29,36 +30,36 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 	
 				//UNCOMENT THIS !!! 2
 
-// //creating schema for films
-// filmsSchema = new mongoose.Schema({
-// 	id : String,
-// 	name: String,
-// 	cast: String,
-// 	director: String,
-// 	img: String,
-// 	decade: String,},
-// 	{collection: 'films'});
+//creating schema for films
+filmsSchema = new mongoose.Schema({
+	id : String,
+	name: String,
+	cast: String,
+	director: String,
+	img: String,
+	decade: String,},
+	{collection: 'films'});
 
 
-// //assign a functuion to it
-// // Todo = mongoose.model('Todo', Schema);
-// mongoose.model('films', filmsSchema);
-// var Fims = mongoose.model('films');
-
-
-
+//assign a functuion to it
+// Todo = mongoose.model('Todo', Schema);
+mongoose.model('films', filmsSchema);
+var Fims = mongoose.model('films');
 
 
 
-// directorsSchema = new mongoose.Schema({
 
-// 	id: String,
-// 	name: String,
-// 	about: String}
-// 	{collection: 'directors'});
 
-// mongoose.model('directors', directorsSchema);
-// var Directors = mongoose.model('directors');
+
+directorsSchema = new mongoose.Schema({
+
+	id: String,
+	name: String,
+	about: String}
+	{collection: 'directors'});
+
+mongoose.model('directors', directorsSchema);
+var Directors = mongoose.model('directors');
 
 
 
@@ -67,6 +68,7 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 
 //GETTING PORT AND TESTING RESPONSE
+// ** SECTION ISOLATED, TESTED, AND WORKING
 
 							
 
