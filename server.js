@@ -56,18 +56,18 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 
 				//sub section isolation
-				//uncoment this 2.2
+				//uncoment this 2.1
 
 
-directorsSchema = new mongoose.Schema({
+// directorsSchema = new mongoose.Schema({
 
-	id: String,
-	name: String,
-	about: String}
-	{collection: 'directors'});
+// 	id: String,
+// 	name: String,
+// 	about: String}
+// 	{collection: 'directors'});
 
-mongoose.model('directors', directorsSchema);
-var Directors = mongoose.model('directors');
+// mongoose.model('directors', directorsSchema);
+// var Directors = mongoose.model('directors');
 
 
 
