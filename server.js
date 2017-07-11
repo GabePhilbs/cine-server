@@ -194,7 +194,14 @@ app.get('/films', function(request, response){
 });
 
 
- app.get('this-director', function(request, response){  
+ app.get('/this-director', function(request, response){  
+	
+
+
+
+
+
+
 	// Directors.find({"name": request.body},function(err,films){
 	// 	if(err){
 	// 		console.log('error with films find')
@@ -203,6 +210,8 @@ app.get('/films', function(request, response){
 	// 	}
 		
 	// })
+
+	res.send( req.query.id);
 	console.log(request.query);
 });
 
