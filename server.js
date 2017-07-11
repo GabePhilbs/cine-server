@@ -143,14 +143,17 @@ app.get('/', function(request, response) {
 
 // ROUTS AND RESPONSES TO API REQUESTS  
 
-Directors.find(function(err,directors){
-		response.send(directors);
-	})				
+				
           											
 
 app.get('/directors', function(request, response){  
 	Directors.find(function(err,directors){
-		response.send(directors);
+		if(err){
+			console.log('error with director find')
+		}else{
+			response.send(directors);
+		}
+		
 	})
 
 
