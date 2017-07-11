@@ -211,8 +211,8 @@ app.get('/films', function(request, response){
 		
 	// })
 
-	// response.send( request.query.id);
-	console.log(request.query);
+	response.send( request.query);
+	//console.log(request.query);
 	//console.log("request received");
 });
 
