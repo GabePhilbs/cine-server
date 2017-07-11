@@ -194,17 +194,17 @@ app.get('/films', function(request, response){
 });
 
 
-//  app.get('this-director', function(request, response){  
-// 	// Directors.find({"name": request.body},function(err,films){
-// 	// 	if(err){
-// 	// 		console.log('error with films find')
-// 	// 	}else{
-// 	// 		response.send(films);
-// 	// 	}
+ app.get('this-director', function(request, response){  
+	// Directors.find({"name": request.body},function(err,films){
+	// 	if(err){
+	// 		console.log('error with films find')
+	// 	}else{
+	// 		response.send(films);
+	// 	}
 		
-// 	// })
-// 	console.log(request.query);
-// });
+	// })
+	console.log(request.query);
+});
 
 
 
