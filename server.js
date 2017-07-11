@@ -34,25 +34,29 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 				//UNCOMENT THIS !!! 2
 
 
-//creating schema for films
-filmsSchema = new mongoose.Schema({
-	id : String,
-	name: String,
-	cast: String,
-	director: String,
-	img: String,
-	decade: String},
-	{collection: 'films'});
+					//sub section isolation
+					//uncoment this 2.2
+
+// //creating schema for films
+// filmsSchema = new mongoose.Schema({
+// 	id : String,
+// 	name: String,
+// 	cast: String,
+// 	director: String,
+// 	img: String,
+// 	decade: String},
+// 	{collection: 'films'});
 
 
-//assign a functuion to it
-// Todo = mongoose.model('Todo', Schema);
-mongoose.model('films', filmsSchema);
-var Fims = mongoose.model('films');
+// //assign a functuion to it
+// // Todo = mongoose.model('Todo', Schema);
+// mongoose.model('films', filmsSchema);
+// var Films = mongoose.model('films');
 
 
 
-
+				//sub section isolation
+				//uncoment this 2.2
 
 
 directorsSchema = new mongoose.Schema({
