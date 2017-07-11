@@ -36,6 +36,7 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 					//sub section isolation
 					//uncoment this 2.2
+					//this part does not appear to be broken
 
 //creating schema for films
 filmsSchema = new mongoose.Schema({
@@ -60,15 +61,14 @@ var Films = mongoose.model('films');
 				//this part is definitely broken
 
 
-// directorsSchema = new mongoose.Schema({
+directorsSchema = new mongoose.Schema({
+	id: String,
+	name: String,
+	about: String},
+	{collection: 'directors'});
 
-// 	id: String,
-// 	name: String,
-// 	about: String}
-// 	{collection: 'directors'});
-
-// mongoose.model('directors', directorsSchema);
-// var Directors = mongoose.model('directors');
+mongoose.model('directors', directorsSchema);
+var Directors = mongoose.model('directors');
 
 
 
