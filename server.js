@@ -199,14 +199,14 @@ app.get('/films', function(request, response){
  app.get('/this-director', function(request, response){  
 	
 
-	Directors.find({"name": request.query.name},function(err,director){
-		if(err){
-			console.log('error with this-director find')
-		}else{
-			response.send(director);
-		}
+	// Directors.find({"name": request.query.name},function(err,director){
+	// 	if(err){
+	// 		console.log('error with this-director find')
+	// 	}else{
+	// 		response.send(director);
+	// 	}
 		
-	})
+	// })
 
 	response.send( request.query);
 	//console.log(request.query);
