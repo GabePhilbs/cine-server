@@ -65,23 +65,24 @@ var Directors = mongoose.model('directors');
 
 //GETTING PORT AND TESTING RESPONSE
 
+							//UNCOMENT THIS !!!
 
 
 // getting port from heroku settings
-app.listen(process.env.PORT || 5000, function(err) {  
-  if (err) {
-    return console.log('something bad happened', err)
-  }
+// app.listen(process.env.PORT || 5000, function(err) {  
+//   if (err) {
+//     return console.log('something bad happened', err)
+//   }
 
-  console.log(`Magic is happening on ${port}`)
-});
+//   console.log(`Magic is happening on ${port}`)
+// });
 
 
 
-app.get('/', function(request, response) {  
-  response.send('Hello from Express!');
-  console.log('route succesfully getting hit');
-});
+// app.get('/', function(request, response) {  
+//   response.send('Hello from Express!');
+//   console.log('route succesfully getting hit');
+// });
 
 
 
@@ -122,24 +123,26 @@ app.get('/', function(request, response) {
 
 
 
-// ROUTS AND RESPONSES TO API REQUESTS
+// ROUTS AND RESPONSES TO API REQUESTS  
 
+						//UNCOMENT THIS !!!
+          											
 
-app.get('/directors', function(request, response) {  
-	Directors.find(function(err,directors){
-		response.send(directors);
-	})
+// app.get('/directors', function(request, response) {  
+// 	Directors.find(function(err,directors){
+// 		response.send(directors);
+// 	})
   	
-	console.log('directors were sent');
-});
+// 	console.log('directors were sent');
+// });
 
 
-app.get('/films', function(request, response) {  
-	Films.find(function(err,films){
-		response.send(films);
-	})
-	console.log('films were sent');
-});
+// app.get('/films', function(request, response) {  
+// 	Films.find(function(err,films){
+// 		response.send(films);
+// 	})
+// 	console.log('films were sent');
+// });
 
 
 // END OF API REQUESTS
