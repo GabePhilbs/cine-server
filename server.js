@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 
 
 
-
+//CONECTING TO MONGO
 
 // // when the project is live on heroku use MONGO_URI instead of the url 
 // // and password/ username. If you push to github like this, anyone 
@@ -22,6 +22,8 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 });
 
+
+//CREATING SCHEMAS AND ASSIGNING VARIABLES
 
 
 //creating schema for films
@@ -61,7 +63,7 @@ var Directors = mongoose.model('directors');
 
 
 
-
+//GETTING PORT AND TESTING RESPONSE
 
 
 
@@ -82,8 +84,13 @@ app.get('/', function(request, response) {
 });
 
 
-// THIS GETS FILMS AND DIRECTORS FROM JSON. IT WORKS
 
+
+
+
+
+
+// THIS GETS FILMS AND DIRECTORS FROM JSON. IT WORKS
 
 
 // var films = [];
@@ -115,6 +122,9 @@ app.get('/', function(request, response) {
 
 
 
+// ROUTS AND RESPONSES TO API REQUESTS
+
+
 app.get('/directors', function(request, response) {  
 	Directors.find(function(err,directors){
 		response.send(directors);
@@ -132,7 +142,7 @@ app.get('/films', function(request, response) {
 });
 
 
-
+// END OF API REQUESTS
 
 
 
