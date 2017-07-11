@@ -166,7 +166,12 @@ app.get('/directors', function(request, response){
 
 app.get('/films', function(request, response) {  
 	Films.find(function(err,films){
-		response.send(films);
+		if(err){
+			console.log('error with director find')
+		}else{
+			response.send(directors);
+		}
+		
 	})
 	console.log('films were sent');
 });
