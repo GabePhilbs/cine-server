@@ -202,16 +202,16 @@ app.get('/films', function(request, response){
 
 
 
-	// Directors.find({"name": request.body},function(err,films){
-	// 	if(err){
-	// 		console.log('error with films find')
-	// 	}else{
-	// 		response.send(films);
-	// 	}
+	Directors.find({"name": request.query},function(err,director){
+		if(err){
+			console.log('error with films find')
+		}else{
+			response.send(director);
+		}
 		
-	// })
+	})
 
-	response.send( request.query);
+	// response.send( request.query);
 	//console.log(request.query);
 	//console.log("request received");
 });
