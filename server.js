@@ -65,10 +65,10 @@ var Directors = mongoose.model('directors');
 
 //GETTING PORT AND TESTING RESPONSE
 
-							//UNCOMENT THIS !!!
+							//UNCOMENT THIS !!! 2
 
 
-// getting port from heroku settings
+// // port from heroku settings
 // app.listen(process.env.PORT || 5000, function(err) {  
 //   if (err) {
 //     return console.log('something bad happened', err)
@@ -125,7 +125,7 @@ var Directors = mongoose.model('directors');
 
 // ROUTS AND RESPONSES TO API REQUESTS  
 
-						//UNCOMENT THIS !!!
+						//UNCOMENT THIS !!! 1
           											
 
 // app.get('/directors', function(request, response) {  
