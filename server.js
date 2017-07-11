@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 
 //CONECTING TO MONGO
 
-			//UNCOMENT THIS !!! 4
+			
 
 // when the project is live on heroku use MONGO_URI instead of the url 
 // and password/ username. If you push to github like this, anyone 
@@ -27,7 +27,7 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 //CREATING SCHEMAS AND ASSIGNING VARIABLES
 	
-				//UNCOMENT THIS !!! 3
+				//UNCOMENT THIS !!! 2
 
 // //creating schema for films
 // filmsSchema = new mongoose.Schema({
@@ -68,24 +68,24 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 //GETTING PORT AND TESTING RESPONSE
 
-							//UNCOMENT THIS !!! 2
+							
 
 
-// // port from heroku settings
-// app.listen(process.env.PORT || 5000, function(err) {  
-//   if (err) {
-//     return console.log('something bad happened', err)
-//   }
+// port from heroku settings
+app.listen(process.env.PORT || 5000, function(err) {  
+  if (err) {
+    return console.log('something bad happened', err)
+  }
 
-//   console.log(`Magic is happening on ${port}`)
-// });
+  console.log(`Magic is happening on ${port}`)
+});
 
 
 
-// app.get('/', function(request, response) {  
-//   response.send('Hello from Express!');
-//   console.log('route succesfully getting hit');
-// });
+app.get('/', function(request, response) {  
+  response.send('Hello from Express!');
+  console.log('route succesfully getting hit');
+});
 
 
 //END OF PORT AND TEST
