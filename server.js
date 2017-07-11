@@ -30,8 +30,12 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 // ** when I uncomented this section, the app crashed
 // this is where the is 
+				
+				// UPDATE: CRASH FIXED, THIS PART WORKS
+				
+
 	
-				//UNCOMENT THIS !!! 2
+				
 
 
 					//sub section isolation
@@ -58,7 +62,7 @@ var Films = mongoose.model('films');
 
 				//sub section isolation
 				//uncoment this 2.1
-				//this part is definitely broken
+				//Fixed!!
 
 
 directorsSchema = new mongoose.Schema({
