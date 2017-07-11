@@ -12,50 +12,53 @@ var bodyParser = require('body-parser');
 
 //CONECTING TO MONGO
 
-// // when the project is live on heroku use MONGO_URI instead of the url 
-// // and password/ username. If you push to github like this, anyone 
-// //write on your  db
-mongoose.connect(process.env.MONGODB_URI, function (error) {
-    if (error) console.error(error);
-    else console.log('mongo connected');
-// });
+			//UNCOMENT THIS !!! 4
 
-});
+// // // when the project is live on heroku use MONGO_URI instead of the url 
+// // // and password/ username. If you push to github like this, anyone 
+// // //write on your  db
+// mongoose.connect(process.env.MONGODB_URI, function (error) {
+//     if (error) console.error(error);
+//     else console.log('mongo connected');
+// // });
+
+// });
 
 
 //CREATING SCHEMAS AND ASSIGNING VARIABLES
+	
+				//UNCOMENT THIS !!! 3
+
+// //creating schema for films
+// filmsSchema = new mongoose.Schema({
+// 	id : String,
+// 	name: String,
+// 	cast: String,
+// 	director: String,
+// 	img: String,
+// 	decade: String,},
+// 	{collection: 'films'});
 
 
-//creating schema for films
-filmsSchema = new mongoose.Schema({
-	id : String,
-	name: String,
-	cast: String,
-	director: String,
-	img: String,
-	decade: String,},
-	{collection: 'films'});
-
-
-//assign a functuion to it
-// Todo = mongoose.model('Todo', Schema);
-mongoose.model('films', filmsSchema);
-var Fims = mongoose.model('films');
+// //assign a functuion to it
+// // Todo = mongoose.model('Todo', Schema);
+// mongoose.model('films', filmsSchema);
+// var Fims = mongoose.model('films');
 
 
 
 
 
 
-directorsSchema = new mongoose.Schema({
+// directorsSchema = new mongoose.Schema({
 
-	id: String,
-	name: String,
-	about: String}
-	{collection: 'directors'});
+// 	id: String,
+// 	name: String,
+// 	about: String}
+// 	{collection: 'directors'});
 
-mongoose.model('directors', directorsSchema);
-var Directors = mongoose.model('directors');
+// mongoose.model('directors', directorsSchema);
+// var Directors = mongoose.model('directors');
 
 
 
@@ -85,7 +88,7 @@ var Directors = mongoose.model('directors');
 // });
 
 
-
+//END OF PORT AND TEST
 
 
 
