@@ -143,19 +143,22 @@ app.get('/', function(request, response) {
 
 // ROUTS AND RESPONSES TO API REQUESTS  
 
-						
+Directors.find(function(err,directors){
+		response.send(directors);
+	})				
           											
 
-app.get('/directors', function(request, response) {  
-	// Directors.find(function(err,directors){
-	// 	response.send(directors);
-	// })
+app.get('/directors', function(request, response){  
+	Directors.find(function(err,directors){
+		response.send(directors);
+	})
 
 
-  	//testing
-  	response.send('directors');
+  	//testing -- response and get work-- problem is in find
+  	// response.send('directors');
 	console.log('directors were sent');
 });
+
 
 
 app.get('/films', function(request, response) {  
