@@ -36,16 +36,16 @@ filmsSchema = new mongoose.Schema({
 	id : String,
 	name: String,
 	cast: String,
-	director: int,
+	director: String,
 	img: String,
-	decade: int,},
+	decade: String,},
 	{collection: 'films'});
 
 
 //assign a functuion to it
 // Todo = mongoose.model('Todo', Schema);
 mongoose.model('films', filmsSchema);
-var fims = mongoose.model('films');
+var Fims = mongoose.model('films');
 
 
 
@@ -59,7 +59,8 @@ directorsSchema = new mongoose.Schema({
 	about: String}
 	{collection: 'directors'});
 
-directors = mongoose.model('directors', directorsSchema);
+mongoose.model('directors', directorsSchema);
+var Directors = mongoose.model('directors');
 
 
 
@@ -122,14 +123,19 @@ app.get('/', function(request, response) {
 
 
 app.get('/directors', function(request, response) {  
-  response.send(directors);
-  console.log('directors were sent');
+	Directors.find(function(err,directors){
+		response.send(directors);
+	})
+  	
+	console.log('directors were sent');
 });
 
 
 app.get('/films', function(request, response) {  
-  response.send(films);
-  console.log('films were sent');
+	Films.find(function(err,films){
+		response.send(films);
+	})
+	console.log('films were sent');
 });
 
 
