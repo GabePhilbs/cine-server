@@ -143,24 +143,27 @@ app.get('/', function(request, response) {
 
 // ROUTS AND RESPONSES TO API REQUESTS  
 
-						//UNCOMENT THIS !!! 1
+						
           											
 
-// app.get('/directors', function(request, response) {  
-// 	Directors.find(function(err,directors){
-// 		response.send(directors);
-// 	})
-  	
-// 	console.log('directors were sent');
-// });
+app.get('/directors', function(request, response) {  
+	// Directors.find(function(err,directors){
+	// 	response.send(directors);
+	// })
 
 
-// app.get('/films', function(request, response) {  
-// 	Films.find(function(err,films){
-// 		response.send(films);
-// 	})
-// 	console.log('films were sent');
-// });
+  	//testing
+  	response.send('directors');
+	console.log('directors were sent');
+});
+
+
+app.get('/films', function(request, response) {  
+	Films.find(function(err,films){
+		response.send(films);
+	})
+	console.log('films were sent');
+});
 
 
 // END OF API REQUESTS
