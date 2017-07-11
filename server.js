@@ -8,32 +8,6 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 
-//creating schema for films
-filmsSchema = new mongoose.Schema({
-	id : String,
-	name: String,
-	cast: String,
-	director: int,
-	img: String,
-	decade: int,},
-	{collection: 'films'});
-
-
-//assign a functuion to it
-// Todo = mongoose.model('Todo', Schema);
-films = mongoose.model('films', filmsSchema);
-
-
-directorsSchema = new mongoose.Schema({
-
-	id: String,
-	name: String,
-	about: String}
-	{collection: 'directors'});
-
-directors = mongoose.model('directors', directorsSchema);
-
-
 
 
 
@@ -57,7 +31,47 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 
 
 
-// test stuff
+//creating schema for films
+filmsSchema = new mongoose.Schema({
+	id : String,
+	name: String,
+	cast: String,
+	director: int,
+	img: String,
+	decade: int,},
+	{collection: 'films'});
+
+
+//assign a functuion to it
+// Todo = mongoose.model('Todo', Schema);
+mongoose.model('films', filmsSchema);
+var fims = mongoose.model('films');
+
+
+
+
+
+
+directorsSchema = new mongoose.Schema({
+
+	id: String,
+	name: String,
+	about: String}
+	{collection: 'directors'});
+
+directors = mongoose.model('directors', directorsSchema);
+
+
+
+
+
+
+
+
+
+
+
+// getting port from heroku settings
 app.listen(process.env.PORT || 5000, function(err) {  
   if (err) {
     return console.log('something bad happened', err)
@@ -73,27 +87,6 @@ app.get('/', function(request, response) {
   console.log('route succesfully getting hit');
 });
 
-// my actual server
-
-//trying to allow cross reference from other domains(delete this section when you upload this)
-// http.createServer(function (req, res) {
-//     res.setHeader("Access-Control-Allow-Origin", "*");
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
-//     res.end('Hello World\n');
-// }).listen(8010);
-// end of the local host section (that will be deleted)
-
-//trying to import array from json -  did not work
-// var directors = [];
-
-// var jf = require('fs');
-// jf.readFile('directors.json', function(err, obj) {
-// 	//for(i=0; i <obj.length; i++){}
-// 	directors = obj;
-// 	//directors = JSON.stringify( obj );
-//   // obj contains JSON data
-// });
- 
 
 // THIS GETS FILMS AND DIRECTORS FROM JSON. IT WORKS
 
