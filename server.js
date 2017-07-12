@@ -236,11 +236,12 @@ app.post('/new-film', function(request, response){
 	//add request to film collection
 	film = new Films(request.body);
 
-
+	console.log(film);
 	film.save(function(err,response){
 		if(err){
         	response.send({"ERROR":"something went wrong"});
 	    }else{
+	    	console.log("not error")
 	       	response.send(film);
 	    }
 	    
