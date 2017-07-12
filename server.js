@@ -10,6 +10,18 @@ var bodyParser = require('body-parser');
 
 
 
+
+//SOME INTERNET GUY SAID TO USE BODY PARSER LINK : https://stackoverflow.com/questions/9177049/express-js-req-body-undefined
+// first response is outdated(I tried), so go for second
+
+var bodyParser = require('body-parser')
+
+
+
+
+
+
+
 //CONECTING TO MONGO 
 // ** SECTION ISOLATED, TESTED, AND WORKING
 
@@ -93,11 +105,6 @@ var Directors = mongoose.model('directors');
 
 
 
-//SOME INTERNET GUY SAID TO USE BODY PARSER LINK : https://stackoverflow.com/questions/9177049/express-js-req-body-undefined
-// first response is outdated(I tried), so go for second
-
-var bodyParser = require('body-parser')
-var app = express()
 
 
 //GETTING PORT AND TESTING RESPONSE
