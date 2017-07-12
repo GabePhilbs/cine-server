@@ -216,7 +216,7 @@ app.post('/new-director', function(request, response){
 	director = new Directors(request.body);
 
 
-	director.save(function(err,response){
+	director.save(function(err){
 		if(err){
         	response.send({"ERROR":"something went wrong"});
 	    }else{
@@ -237,7 +237,7 @@ app.post('/new-film', function(request, response){
 	film = new Films(request.body);
 
 	console.log(film);
-	film.save(function(err,response){
+	film.save(function(err){
 		if(err){
         	response.send({"ERROR":"something went wrong"});
 	    }else{
@@ -266,6 +266,65 @@ app.post('/delete', function(request, response){
 
 
 })
+
+
+////create new user
+// app.post('/new-user', function(request, response){
+
+// 	console.log("posted to new-film");
+// 	console.log(request.body);
+
+
+// 	//add request to film collection
+// 	user = new User(request.body);
+
+// 	console.log(film);
+// 	user.save(function(err){
+// 		if(err){
+//         	response.send({"ERROR":"something went wrong"});
+// 	    }else{
+// 	    	console.log("not error")
+// 	       	response.send(user);
+// 	    }
+	    
+// 	})	
+
+
+
+// })
+
+var logged = false;
+var editor = false;
+
+
+app.post('login', function(request, response){
+
+	console.log("posted to this-director");
+	console.log(request.body);
+
+
+	user = request.body.director;
+	console.log(user);
+
+	//did this for test, CHANGE NAME TO nameDir
+	Directors.find({name: user.username, password: user.password},function(err,user){
+		if(err){
+			console.log('error with this-director find')
+		}else{
+			thisDir = director;
+			console.log(thisDir);
+			response.send(thisDir);
+		}
+		
+	})
+})
+
+
+
+
+
+
+
 
 
 
