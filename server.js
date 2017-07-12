@@ -224,14 +224,14 @@ app.post('/this-director', function(request, response){
 // 	var query = {name: nameDIr }
 // 	console.log(query)
 
-	Directors.find({query},function(err,director){
-		if(err){
-			console.log('error with this-director find')
-		}else{
-			response.send(director);
-		}
+	// Directors.find({query},function(err,director){
+	// 	if(err){
+	// 		console.log('error with this-director find')
+	// 	}else{
+	// 		response.send(director);
+	// 	}
 		
-	})
+	// })
 
 // 	response.send( request.query.name);
 // 	//console.log(request.query);
