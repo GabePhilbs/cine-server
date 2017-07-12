@@ -237,6 +237,8 @@ app.post('/delete', function(request, response){
 
 	console.log("posted to delete");
 	console.log(request.body);
+	console.log(request.body.filmDel);
+	console.log(request.body.directorDel)
 
 
 	//delete these items
