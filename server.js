@@ -213,14 +213,14 @@ app.post('/new-director', function(request, response){
 
 
 	//add request to directors collection
-	film = new Films(request.body);
+	director = new Directors(request.body);
 
 
-	film.save(function(err,response){
+	director.save(function(err,response){
 		if(err){
         	response.send({"ERROR":"something went wrong"});
 	    }else{
-	       	response.send(film);
+	       	response.send(director);
 	    }
 
 	})
