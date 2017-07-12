@@ -201,21 +201,21 @@ app.get('/films', function(request, response){
 	var nameDIr = request.query.name 
 	console.log(nameDIr);
 
-	var query = {name: nameDIr }
-	console.log(query)
+	// var query = {name: nameDIr }
+	// console.log(query)
 
-	Directors.find({query},function(err,director){
-		if(err){
-			console.log('error with this-director find')
-		}else{
-			response.send(director);
-		}
+	// // Directors.find({query},function(err,director){
+	// // 	if(err){
+	// // 		console.log('error with this-director find')
+	// // 	}else{
+	// // 		response.send(director);
+	// // 	}
 		
-	})
+	// // })
 
-	response.send( request.query.name);
-	//console.log(request.query);
-	//console.log("request received");
+	// response.send( request.query.name);
+	// //console.log(request.query);
+	// //console.log("request received");
 });
 
 
