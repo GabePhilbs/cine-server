@@ -214,10 +214,10 @@ app.post('/this-director', function(request, response){
 	console.log(request.body);
 
 
-	nameDIr = request.body;
+	nameDIr = request.body.name;
 	console.log(nameDIr);
 
-	Directors.find({name: nameDIr},function(err,director){
+	Directors.find({name: "hello"},function(err,director){
 		if(err){
 			console.log('error with this-director find')
 		}else{
