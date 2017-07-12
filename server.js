@@ -204,12 +204,13 @@ app.get('/films', function(request, response){
 
 
 
-var nameDIr = '';
+var nameDIr = {};
 var thisDir = {};
 
 app.post('/this-director', function(request, response){
 
 	console.log("posted to this-director");
+	console.log(request);
 	console.log(request.body);
 
 
