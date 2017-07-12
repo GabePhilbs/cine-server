@@ -8,21 +8,6 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 
-
-
-
-//SOME INTERNET GUY SAID TO USE BODY PARSER LINK : https://stackoverflow.com/questions/9177049/express-js-req-body-undefined
-// first response is outdated(I tried), so go for second
-
-var bodyParser = require('body-parser');
-app.use(bodyParser.json());
-
-
-
-
-
-
-
 //CONECTING TO MONGO 
 // ** SECTION ISOLATED, TESTED, AND WORKING
 
@@ -52,6 +37,13 @@ mongoose.connect(process.env.MONGODB_URI, function (error) {
 // });
 
 
+//SOME INTERNET GUY SAID TO USE BODY PARSER LINK : https://stackoverflow.com/questions/9177049/express-js-req-body-undefined
+// first response is outdated(I tried), so go for second
+
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extende: false}))
+app.use(bodyParser.json());
 
 
 
@@ -81,6 +73,24 @@ filmsSchema = new mongoose.Schema({
 	img: String,
 	decade: String},
 	{collection: 'films'});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //assign a functuion to it
@@ -135,39 +145,6 @@ app.get('/', function(request, response) {
 
 
 
-// THIS GETS FILMS AND DIRECTORS FROM JSON. IT WORKS
-
-
-// var films = [];
-// var directors =[];
-
-// fs.readFile('directors.json', 'utf8', function (err, data){
-// 	      if(err) throw err;
-// 	      directors = JSON.parse(data);
-
-// 	fs.readFile('films.json', 'utf8', function (err, data){
-// 	      if(err) throw err;
-// 	      films = JSON.parse(data);
-// 	      function getdir(films){for(var i = 0; i< films.length; i++){
-// 				var dir = directors[films[i].director];
-// 				films[i].director = dir;
-// 				}};
-// 			getdir(films);	
-	      
-// 	     });
-// });
-
-//END OF JSON STUFF
-
-
-// for(var i = 0; i< films.legth; i++){
-// 	var dir = directors[films[i].director];
-// 	films[i].director = dir;
-// }
-
-
-
-// ROUTS AND RESPONSES TO API REQUESTS  
 
 				
           											
@@ -210,19 +187,19 @@ var thisDir = {};
 app.post('/this-director', function(request, response){
 
 	console.log("posted to this-director");
-	console.log(request);
 	console.log(request.body);
 
 
-	nameDIr = request.body.name;
-	console.log(nameDIr);
+	nameDIr = request.body.director;
+	// console.log(nameDIr);
 
+	//did this for test, CHANGE NAME TO nameDir
 	Directors.find({name: "hello"},function(err,director){
 		if(err){
 			console.log('error with this-director find')
 		}else{
 			thisDir = director;
-			console.log(thisDir);
+			// console.log(thisDir);
 			response.send(thisDir);
 		}
 		
