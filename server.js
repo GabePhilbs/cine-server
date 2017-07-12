@@ -234,7 +234,17 @@ app.post('/new-film', function(request, response){
 
 
 	//add request to film collection
-	
+	film = new Films(request.body);
+
+
+	film.save(function(err,response){
+		if(err){
+        	response.send({"ERROR":"something went wrong"});
+	    }else{
+	       	response.send(film);
+	    }
+	    
+	})	
 
 
 
