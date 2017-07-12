@@ -212,7 +212,7 @@ app.post('/new-director', function(request, response){
 	console.log(request.body);
 
 
-	//add this to the collection
+	//add request to directors collection
 	
 
 
@@ -225,7 +225,7 @@ app.post('/new-film', function(request, response){
 	console.log(request.body);
 
 
-	//add this to the collection
+	//add request to film collection
 	
 
 
@@ -233,7 +233,18 @@ app.post('/new-film', function(request, response){
 })
 
 
+app.post('/delete', function(request, response){
 
+	console.log("posted to delete");
+	console.log(request.body);
+
+
+	//delete these items
+	
+
+
+
+})
 
 
 
