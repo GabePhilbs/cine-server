@@ -206,49 +206,33 @@ app.post('/this-director', function(request, response){
 	})
 })
 
+app.post('/new-directo', function(request, response){
+
+	console.log("posted to new-director");
+	console.log(request.body);
 
 
-
-
-
-//  app.get('/this-director', function(request, response){  
+	//add this to the collection
 	
-// 	var nameDIr = request.query.name 
-// 	console.log(nameDIr);
-
-// 	var query = {name: nameDIr }
-// 	console.log(query)
-
-	// Directors.find({query},function(err,director){
-	// 	if(err){
-	// 		console.log('error with this-director find')
-	// 	}else{
-	// 		response.send(director);
-	// 	}
-		
-	// })
-
-// 	response.send( request.query.name);
-// 	//console.log(request.query);
-// 	//console.log("request received");
-// });
 
 
 
+})
+
+app.post('/new-film', function(request, response){
+
+	console.log("posted to new-film");
+	console.log(request.body);
+
+
+	//add this to the collection
+	
 
 
 
-// app.get('this-film', function(request, response){  
-// 	Films.find(function(err,films){
-// 		if(err){
-// 			console.log('error with films find')
-// 		}else{
-// 			response.send(films);
-// 		}
-		
-// 	})
-// 	console.log('films were sent');
-// });
+})
+
+
 
 
 
