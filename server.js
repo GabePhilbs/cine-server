@@ -213,8 +213,8 @@ app.post('/new-director', function(request, response){
 
 
 	//add request to directors collection
-	film = new Films();
-	film = request.body;
+	film = new Films(request.body);
+
 
 	film.save(function(err,response){
 		if(err){
