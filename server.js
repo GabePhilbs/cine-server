@@ -198,8 +198,13 @@ app.get('/films', function(request, response){
 
  app.get('/this-director', function(request, response){  
 	
+	var nameDIr = request.query.name 
+	console.log(nameDIr);
 
-	Directors.find({name: request.query.name},function(err,director){
+	var query = {name: nameDIr }
+	console.log(query)
+
+	Directors.find({query},function(err,director){
 		if(err){
 			console.log('error with this-director find')
 		}else{
