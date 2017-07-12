@@ -190,8 +190,8 @@ app.post('/this-director', function(request, response){
 	console.log(request.body);
 
 
-	nameDIr = request.body.director;
-	console.log(nameDIr);
+	nameDir = request.body.director;
+	console.log(nameDir);
 
 	//did this for test, CHANGE NAME TO nameDir
 	Directors.find({name: nameDir},function(err,director){
