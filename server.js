@@ -195,6 +195,26 @@ app.get('/films', function(request, response){
 
 
 
+var nameDIr = '';
+var thisDir = {};
+
+app.post('/this-director', function(request, response){
+	nameDIr = request;
+	Directors.find({name: nameDIr},function(err,director){
+		if(err){
+			console.log('error with this-director find')
+		}else{
+			thisDir = director;
+			console.log(thisDir);
+		}
+		
+	})
+})
+
+
+
+
+
 
 //  app.get('/this-director', function(request, response){  
 	
@@ -204,14 +224,14 @@ app.get('/films', function(request, response){
 // 	var query = {name: nameDIr }
 // 	console.log(query)
 
-// 	Directors.find({query},function(err,director){
-// 		if(err){
-// 			console.log('error with this-director find')
-// 		}else{
-// 			response.send(director);
-// 		}
+	Directors.find({query},function(err,director){
+		if(err){
+			console.log('error with this-director find')
+		}else{
+			response.send(director);
+		}
 		
-// 	})
+	})
 
 // 	response.send( request.query.name);
 // 	//console.log(request.query);
