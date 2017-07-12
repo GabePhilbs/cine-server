@@ -199,7 +199,14 @@ var nameDIr = '';
 var thisDir = {};
 
 app.post('/this-director', function(request, response){
-	nameDIr = request;
+
+	console.log("posted to this-director");
+	console.log(request.body);
+
+
+	nameDIr = request.body;
+	console.log(nameDIr);
+
 	Directors.find({name: nameDIr},function(err,director){
 		if(err){
 			console.log('error with this-director find')
