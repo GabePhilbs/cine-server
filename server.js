@@ -206,7 +206,7 @@ app.post('/this-director', function(request, response){
 	})
 })
 
-app.post('/new-directo', function(request, response){
+app.post('/new-director', function(request, response){
 
 	console.log("posted to new-director");
 	console.log(request.body);
