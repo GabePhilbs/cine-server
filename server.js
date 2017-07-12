@@ -181,7 +181,7 @@ app.get('/films', function(request, response){
 
 
 
-var nameDIr = {};
+var nameDIr = '';
 var thisDir = {};
 
 app.post('/this-director', function(request, response){
@@ -191,7 +191,7 @@ app.post('/this-director', function(request, response){
 
 
 	nameDIr = request.body.director;
-	// console.log(nameDIr);
+	console.log(nameDIr);
 
 	//did this for test, CHANGE NAME TO nameDir
 	Directors.find({name: nameDir},function(err,director){
@@ -199,7 +199,7 @@ app.post('/this-director', function(request, response){
 			console.log('error with this-director find')
 		}else{
 			thisDir = director;
-			// console.log(thisDir);
+			console.log(thisDir);
 			response.send(thisDir);
 		}
 		
