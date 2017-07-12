@@ -223,6 +223,7 @@ app.post('/this-director', function(request, response){
 		}else{
 			thisDir = director;
 			console.log(thisDir);
+			response.send(thisDir);
 		}
 		
 	})
