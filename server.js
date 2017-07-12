@@ -93,14 +93,15 @@ var Directors = mongoose.model('directors');
 
 
 
+//SOME INTERNET GUY SAID TO USE BODY PARSER LINK : https://stackoverflow.com/questions/9177049/express-js-req-body-undefined
 
-
-
+app.configure(function(){
+  app.use(express.bodyParser());
+  app.use(app.router);
+});
 
 //GETTING PORT AND TESTING RESPONSE
-// ** SECTION ISOLATED, TESTED, AND WORKING
-
-							
+// ** SECTION ISOLATED, TESTED, AND WORKING							
 
 
 // port from heroku settings
