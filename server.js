@@ -194,7 +194,7 @@ app.post('/this-director', function(request, response){
 	// console.log(nameDIr);
 
 	//did this for test, CHANGE NAME TO nameDir
-	Directors.find({name: "hello"},function(err,director){
+	Directors.find({name: nameDir},function(err,director){
 		if(err){
 			console.log('error with this-director find')
 		}else{
