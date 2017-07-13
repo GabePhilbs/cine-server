@@ -264,8 +264,8 @@ app.post('/delete', function(request, response){
 		if(err){
 			console.log('error with this-director find')
 		}else{
-			thisDir = director;
-			console.log(thisDir);
+			 
+			console.log(director);
 			
 		}
 		
@@ -275,8 +275,8 @@ app.post('/delete', function(request, response){
 		if(err){
 			console.log('error with this-director find')
 		}else{
-			thisFilm = film;
-			console.log(thisFilm);
+			 
+			console.log(film);
 			
 		}
 		
