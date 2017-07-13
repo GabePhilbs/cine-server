@@ -252,15 +252,34 @@ app.post('/new-film', function(request, response){
 })
 
 
+
+
+
+
+
+
+
+var dirDelName = '';
+var filmDelName = '' ;
+var thisFilmDel = {};
+var thisDirDel = {};
+
 app.post('/delete', function(request, response){
 
-	console.log("posted to delete");
-	console.log(request.body);
-	console.log(request.body.filmDel);
-	console.log(request.body.directorDel);
 
-	var dirDelName = request.body.directorDel;
-	var filmDelName = request.body.filmDel;
+	console.log("posted to delete");
+	// console.log(request.body);
+	console.log(request.body.filmDel);
+
+	console.log(request.body.directorDel)
+
+
+	dirDelName = request.body.directorDel;
+	filmDelName = request.body.filmDel;
+
+	console.log(dirDelName);
+
+	console.log(filmDelName)
 
 	//find director
 	Directors.find({name: dirDelName},function(err,director){
@@ -269,6 +288,8 @@ app.post('/delete', function(request, response){
 		}else{
 			 
 			console.log(director);
+			thisDirDel = director;
+			console.log(thisDirDel;
 			
 		}
 		
@@ -279,6 +300,8 @@ app.post('/delete', function(request, response){
 			console.log('error with this-director find')
 		}else{
 			 
+			console.log(film);
+			thisFilmDel = film;
 			console.log(film);
 			
 		}
@@ -327,6 +350,15 @@ app.post('login', function(request, response){
 
 	console.log("posted to this-director");
 	console.log(request.body);
+
+
+
+
+
+
+
+
+
 
 
 	user = request.body.director;
