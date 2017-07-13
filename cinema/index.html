@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ag-webpage</title>
+
+	<!-- include this in every page -->
+		<!-- JAVASCRIPT -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+	   <!--  getting arrays -->
+	  <!--  <script type="text/javascript" src="js/films-array.js"></script> -->
+
+	    <!-- Jquery UI css -->
+	    <link rel="stylesheet" href="timeliner-master/jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
+ 		<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+
+		<!-- CSS & BOOTSTRAP -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- custom css -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- include until this point -->
+
+	<!-- resources for the timeline -->
+		<link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen">
+
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+		<script type="text/javascript" src="js/timeliner.min.js"></script>
+
+
+	<!-- end of timeline resources -->
+
+	<!-- resources for the timeline -->
+		<!-- <link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/timeliner.min.js"></script>
+ -->
+
+	<!-- end of timeline resources -->
+
+
+
+
+
+	<!--  getting arrays -->
+	<script type="text/javascript" src="js/var-init.js"></script>
+		
+
+</head>
+
+<!-- beginning of the navbar block -->
+<body>
+		<!--  getting arrays -->
+		
+
+
+		<!-- setting the var fil to the default value when loading the page -->
+		<script type="text/javascript"> film = 1; //console.log(film);</script>
+		
+
+		<nav>
+				 <!-- beginning of the navbar block -->
+
+
+	<!-- this div just occupies space, to give the page a responsive margin for the menu to be in -->
+		<nav class="navbar navbar-default  container-fluid ">
+				<div class="row top-row">
+
+			    	<div class="navbar-text col-2-xs col-4-sm col-md-5 col-lg-5" ></div>
+				    <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">Home</a></div>
+				    <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">Films</a></div>
+				   <!-- //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 2</a></div>
+				   //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 3</a></div>
+				   //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 4</a></div>   
+				   //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 5</a></div>
+			   -->
+				   	<div class="navbar-text col-xs-6 col-sm-6 col-md-6 col-lg-4">
+					   <form class="navbar-form navbar-right" role="search">
+		                    <div class="form-group">
+		                        <input type="text" class="form-control" name="username" placeholder="Username">
+		                    </div>
+		                    <div class="form-group">
+		                        <input type="text" class="form-control" name="password" placeholder="Password">
+		                    </div>
+		                    <button type="submit" class="btn btn-default">Sign In</button>
+		            	</form>
+		            </div>
+			</div>
+		</div>
+
+		<!--NAVBAR BEGINS-->
+		<nav class="navbar navbar-default navbar-fixed-top container-fluid ">
+	
+
+		    	<div class="row menu-row">
+
+			    	<div class="navbar-text col-xs-0 col-sm-2 col-md-2 col-lg-4" ></div>
+				    <div class="navbar-text col-xs-3 col-sm-2 col-md-2 col-lg-2" ><a href="#pageTop" class="smoothScroll" id ="homeButton">home</a></div>
+				    <div class="navbar-text col-xs-3 col-sm-2 col-md-2 col-lg-2" ><a href="#timeline" class="smoothScroll">Films</a></div>
+				   <!-- //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 2</a></div>
+				   //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 3</a></div>
+				   //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 4</a></div>    
+				   //  <div class="navbar-text col-xs-4 col-sm-2 col-md-1 col-lg-1" ><a href="#">film 5</a></div> -->
+				   	<div class="navbar-text col-xs-6 col-sm-6 col-md-6 col-lg-4">
+					   <form class="navbar-form navbar-right" role="search">
+		                    <div class="form-group">
+		                        <input type="text" class="form-control" name="username" placeholder="Username">
+		                    </div>
+		                    <div class="form-group">
+		                        <input type="text" class="form-control" name="password" placeholder="Password">
+		                    </div>
+		                    <button type="submit" class="btn btn-default">Sign In</button>
+		            	</form>
+		            </div>
+		    </div>
+		   	
+	
+		  
+		</nav>
+
+<!-- end of the navbar block -->
+
+
+		</nav>
+		<a id="pageTop"></a>
+
+
+		<!-- Home html will be iserted here -->
+		<div id="homeSpot">
+				 <!--START CAROUSEL-->
+					<div id="main-carousel" class="carousel slide img-responsive "  data-ride="carousel" >
+
+						<ol class ="carousel-indicators">
+							<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#main-carousel" data-slide-to="1"></li>
+							<li data-target="#main-carousel" data-slide-to="2"></li>
+						</ol>
+
+						<div class="carousel-inner" role="listbox">
+
+							<div class="item active" id="image1">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>I WAS BORN, BUT... 1932</p>
+									</div>
+							</div>
+
+							<div class="item" id="image2">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>NORA INU 1949</p>
+									</div>
+							</div>
+
+							<div class="item" id="image3">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>GOJIRA 1954</p>
+									</div>
+							</div>
+
+							<div class="item" id="image4">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>TOKYO DRIFTER 1966</p>
+									</div>
+							</div>
+
+							<div class="item" id="image5">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>HOUSE 1977</p>
+									</div>
+							</div>
+
+							<div class="item" id="image6">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>TAMPOPO 1985</p>
+									</div>
+							</div>
+
+							<div class="item" id="image7">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>RAINY DOG 1997</p>
+									</div>
+							</div>
+
+							<div class="item" id="image8">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>SPIRITED AWAY 2001</p>
+									</div>
+							</div>
+
+							<div class="item" id="image9">
+									<div class="carousel-caption">
+										<h1>JAPANESE CINEMA</h1> 
+										<p>OUTRAGE 2010</p>
+									</div>
+							</div>
+
+						</div>
+
+						  <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+
+						  <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>
+
+					</div>
+
+					<!--END CAROUSEL-->
+
+					<!--START JUMBOTRON -->
+
+
+			            <div class="jumbotron" id="main-jumbo">
+			            <div class="container" id="sign-up">
+
+			              
+			                <div class="dropdown">
+			                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			                    EDIT FILM LIST
+			                        <span class="caret"></span>
+			                      </button>
+			                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			                        <li><a id="addDirectorDrop">Add Director</a></li>
+			                        <li><a id="addFilmDrop">Add Film</a></li>
+			                        <li><a id="deleteDrop">Remove Film or Director</a></li>
+			                      </ul>
+			                </div>
+			                <div id="formSpot">
+			                	<div id="formSpotMessage"></div>
+			                	<div id="formHolder">
+									<div class ="formContainer" id='newDirectorCont'>
+
+										<form id='newDirector' method='post' action='#' onsubmit="checkMyForm(); return false;">
+
+											<h3>New Director</h3>
+											<!-- name is how the infromation will be identidfied when you get data from the form -->
+									        <div class=row><input id='directorName' name='directorName' placeholder='Name'></div>
+
+
+											<!-- <div class=row><input id='about' name='about' placeholder='About this director'></div> -->
+
+											<textarea id = 'about' name='about' placeholder='About this director'></textarea>
+
+											<button type="button" id='addDirectorButton'>Add director</button>
+
+										</form>
+									</div>
+
+									<div class ="formContainer " id='addFilmCont'>
+										<form id='newFilm' method='post' action='#' onsubmit="checkMyForm(); return false;">
+
+											<h3>New Film</h3>
+											<select id = "directorSelect" name="directorsSelect" class="directorSelectList">
+																																				
+												<!-- <div class="directorSelectList"></div> -->
+							  				</select>
+
+
+
+											<!-- name is how the infromation will be identidfied when you get data from the form -->
+									        <div class=row><input id='filmName' name='filmName' placeholder='Name'></div>
+
+									        <textarea id = "summaryField" name="summaryField" form="newFilm" placeholder='Write a summary for this film'></textarea>
+
+									        <textarea id="castField" name="castField" form="newFilm" placeholder='Cast'></textarea>
+											
+											<select id= "decadeSelect" name="decadeSelect">
+												<option value="" disabled selected>Decade</option>
+												<option value="1930">1930's</option> 
+												<option value="1940">1940's</option> 
+												<option value="1950">1950's</option> 
+												<option value="1960">1960's</option> 
+												<option value="1970">1970's</option> 
+												<option value="1980">1980's</option>
+												<option value="1990">1990's</option> 
+												<option value="2000">2000's</option> 
+												<option value="2010">2010's</option> 				
+							  				</select>
+											
+							  				<div class=row><input id='imgLink' name='imgLink' placeholder='Image Link'></div>
+
+
+											<button type="button" id='addFilmButton'>Add Film</button>
+
+										</form>
+									</div>
+
+									<div class ="formContainer" id='deleteCont'>
+										<form id='delete' method='post' action='#' onsubmit="checkMyForm(); return false;">
+
+											<h3>Delete Film or Director</h3>
+											<!-- name is how the infromation will be identidfied when you get data from the form -->
+									        <select id="directorsDelete" name="directorsDelete" class="directorSelectList">
+												<option value="" selected="selected">Director</option>
+										
+							  				</select>
+
+											
+											<p>and/or</p>
+											
+
+											<select id="filmSelect" name="filmSelect" class="filmSelectList">
+												<option value="" selected="selected">Film</option>
+
+												
+							  				</select>
+
+
+											<button type="button" id='deleteButton'>Delete</button>
+
+										</form>
+
+								</div>
+								</div>
+
+			                </div>
+			            </div>
+			        </div>
+
+
+					<!--END JUMBOTRON -->
+		</div>
+		<!-- film body html will be iserted here -->
+		<div id="filmSpot">  <div class="jumbotron" id="filmBanner">
+  <h1 id= "filmBannerTitle"> </h1>
+  <!-- <p>...</p> -->
+ </div>
+
+
+
+ <!-- collapsible accordion start  -->
+		
+
+		 <div id="accordion" class="accordionTitle" >
+
+		  <h3>Summary</h3>
+
+		  <div>
+		  <p id="summary"></p>
+		 </div>
+
+		 <h3 id="directorName" ></h3>
+
+		  <div>
+		  <p id="aboutDirector"></p>
+		  </div>
+
+		  <h3>Cast</h3>
+
+		  <div>
+		    <p id = "cast"></p>
+		  </div>
+
+		 </div>
+
+ <!-- collapsible accordion end  --></div>
+
+		<!-- body html will be iserted here (old function)-->
+		<div id="bodySpot"></div>
+
+
+
+			<!-- ANCHOR TO TIMELINE -->
+			<a name="timeline"></a>
+			<!--CALL TIMELINE FROM OTHER FILE -->
+			<div class="timelineSpot col-xs-12">
+				
+			</div>
+
+
+
+	<!-- GOOGLE MAPS-->
+	<div id="japanMap">
+		<h1>Japan</h1>
+
+		<div id="googleMap" style="width:100%;height:400px;"></div>
+
+		<script>
+			function myMap() {
+			var mapProp= {
+			    center:new google.maps.LatLng(35.652832, 139.839478),
+			    zoom:5,
+			};
+			var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+		</script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZMD7ZXsTsa-GRkCGeN5CskFAZPuwNtiw&callback=myMap"></script>
+	</div>
+	<!-- GOOGLE MAPS END-->
+
+
+
+
+	<!-- getting stuff for smooth scroll -->
+	
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+
+	
+
+	
+	<!--     INSERT TIMELINE -->
+	<script type="text/javascript" src="js/timeline.js"></script>
+
+
+	<!-- custom script -->
+	<script type="text/javascript" src="js/ag-webpage.js"></script>
+
+</body>
+</html>
