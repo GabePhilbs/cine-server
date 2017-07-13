@@ -260,7 +260,7 @@ app.post('/new-film', function(request, response){
 
 
 var dirDelName = '';
-var filmDelName = '' ;
+var filmDelName = '';
 var thisFilmDel = {};
 var thisDirDel = {};
 
@@ -289,7 +289,7 @@ app.post('/delete', function(request, response){
 			 
 			console.log(director);
 			thisDirDel = director;
-			console.log(thisDirDel;
+			console.log(thisDirDel);
 			
 		}
 		
@@ -314,7 +314,7 @@ app.post('/delete', function(request, response){
 
 
 
-})
+});
 
 
 ////create new user
