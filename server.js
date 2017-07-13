@@ -329,7 +329,6 @@ app.post('/delete', function(request, response){
 	});
 
 
-	delete these items
 	
 
 
