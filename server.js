@@ -282,7 +282,7 @@ app.post('/delete', function(request, response){
 	console.log(filmDelName)
 
 	//find director
-	Directors.find(function(err,director){
+	Directors.find({name: dirDelName}, function(err,director){
 		if(err){
 			console.log('error with this-director find')
 		}else{
@@ -293,20 +293,20 @@ app.post('/delete', function(request, response){
 			
 		}
 		
-	})
-	//find director
-	Films.find(function(err,film){
-		if(err){
-			console.log('error with this-director find')
-		}else{
+	// })
+	// //find film
+	// Films.find({name: filmDelName}, function(err,film){
+	// 	if(err){
+	// 		console.log('error with this-director find')
+	// 	}else{
 			 
-			console.log(film);
-			thisFilmDel = film;
-			console.log(film);
+	// 		console.log(film);
+	// 		thisFilmDel = film;
+	// 		console.log(film);
 			
-		}
+	// 	}
 		
-	})
+	// })
 
 
 	//delete these items
