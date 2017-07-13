@@ -282,14 +282,16 @@ app.post('/delete', function(request, response){
 	console.log(filmDelName)
 
 	//find director
-	Directors.find({name: dirDelName}, function(err,director){
+	Directors.find( function(err,director){
 		if(err){
 			console.log('error with this-director find')
 		}else{
 			 
 			console.log(director);
-			thisDirDel = director;
-			console.log(thisDirDel);
+
+
+			// for(var i =0; i< director.length, i)
+			// name: dirDelName
 			
 		}
 		
