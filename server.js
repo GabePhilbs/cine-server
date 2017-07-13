@@ -282,45 +282,27 @@ app.post('/delete', function(request, response){
 	console.log(filmDelName)
 
 	//find director
-	// Directors.find({name: dirDelName}, function(err,director){
-	// 	if(err){
-	// 		console.log('error with this-director find')
-	// 	}else{
+	Directors.find({name: dirDelName}, function(err,director){
+		if(err){
+			console.log('error with this-director find')
+		}else{
 			 
-			
-	// 		console.log(director);
-	// 		thisDirDel = director[0];
-	// 		console.log(thisDirDel);
+			if(director != null){
+				console.log(director);
+				thisDirDel = director[0];
+				console.log(thisDirDel);
 
-	// 		thisDirDel.remove(function(err){
-	// 			if(err){
-	// 				console.log(" error")
-	// 			}
-	// 			console.log("removed");
-	// 		});
+				thisDirDel.remove(function(err){
+					if(err){
+						console.log(" error")
+					}
+					console.log("removed");
+				});
 
-
-
-
-	// 		// console.log(director);
-
-
-	// 		// for(var i =0; i < director.length; i++){
-
-	// 		// 	console.log(director[i].name);
-	// 		// 	console.log(dirDelName);
-	// 		// 	console.log(director[i].name == dirDelName);
-
-	// 		// 	if(director[i].name == dirDelName ){
-	// 		// 		console.log(director[i]);
-	// 		// 		 thisDirDel = director[i]
-	// 		// 		 console.log(thisDirDel);
-	// 		// 	}
-	// 		// }
-			
-	// 	}
+			}			
+		}
 		
-	// });
+	});
 	//find film
 	console.log()
 	Films.find({name: filmDelName}, function(err,film){
@@ -328,17 +310,18 @@ app.post('/delete', function(request, response){
 			console.log('error with this-director find')
 		}else{
 			 
-			console.log(film);
-			thisFilmDel = film[0];
-			console.log(thisFilmDel);
+			if(film != null){
+				console.log(film);
+				thisFilmDel = film[0];
+				console.log(thisFilmDel);
 
-			thisFilmDel.remove(function(err){
-				if(err){
-					console.log(" error")
-				}
-				console.log("removed");
-			});
-
+				thisFilmDel.remove(function(err){
+					if(err){
+						console.log(" error")
+					}
+					console.log("removed");
+				});
+			}
 			
 		}
 		
