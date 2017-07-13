@@ -259,6 +259,29 @@ app.post('/delete', function(request, response){
 	console.log(request.body.filmDel);
 	console.log(request.body.directorDel)
 
+	//find director
+	Directors.find({name: request.body.directorDel},function(err,director){
+		if(err){
+			console.log('error with this-director find')
+		}else{
+			thisDir = director;
+			console.log(thisDir);
+			
+		}
+		
+	})
+	//find director
+	Films.find({name: request.body.filmDel},function(err,film){
+		if(err){
+			console.log('error with this-director find')
+		}else{
+			thisFilm = film;
+			console.log(thisFilm);
+			
+		}
+		
+	})
+
 
 	//delete these items
 	
