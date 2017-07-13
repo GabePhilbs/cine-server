@@ -290,7 +290,12 @@ app.post('/delete', function(request, response){
 			console.log(director);
 
 
-			for(var i =0; i< director.length; i++){
+			for(var i =0; i < director.length; i++){
+
+				console.log(director[i].name);
+				console.log(dirDelName);
+				console.log(director[i].name == dirDelName);
+				
 				if(director[i].name == dirDelName ){
 					console.log(director[i]);
 					 thisDirDel = director[i]
