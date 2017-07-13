@@ -313,7 +313,7 @@ app.post('/delete', function(request, response){
 			
 		}
 		
-	})
+	});
 	//find film
 	Films.find({name: filmDelName}, function(err,film){
 		if(err){
@@ -326,7 +326,7 @@ app.post('/delete', function(request, response){
 			
 		}
 		
-	})
+	});
 
 
 	delete these items
