@@ -282,7 +282,7 @@ app.post('/delete', function(request, response){
 	console.log(filmDelName)
 
 	//find director
-	Directors.find({name: dirDelName},function(err,director){
+	Directors.find(function(err,director){
 		if(err){
 			console.log('error with this-director find')
 		}else{
@@ -295,7 +295,7 @@ app.post('/delete', function(request, response){
 		
 	})
 	//find director
-	Films.find({name: filmDelName},function(err,film){
+	Films.find(function(err,film){
 		if(err){
 			console.log('error with this-director find')
 		}else{
