@@ -309,7 +309,7 @@ app.post('/delete', function(request, response){
 			// 		 thisDirDel = director[i]
 			// 		 console.log(thisDirDel);
 			// 	}
-			}
+			// }
 			
 		}
 		
