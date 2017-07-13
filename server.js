@@ -289,8 +289,12 @@ app.post('/delete', function(request, response){
 			 
 
 			console.log(director);
-			thisFilmDel = director;
-			console.log(director);
+			thisDirDel = director[0];
+			console.log(thisDirDel);
+
+			thisDirDel.remove(function(){
+				console.log("removed");
+			});
 
 
 
@@ -321,8 +325,12 @@ app.post('/delete', function(request, response){
 		}else{
 			 
 			console.log(film);
-			thisFilmDel = film;
+			thisFilmDel = film[0];
 			console.log(thisFilmDel);
+			thisFilmDel.remove(function(){
+				console.log("removed");
+			});
+
 			
 		}
 		
