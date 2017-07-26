@@ -345,7 +345,7 @@ app.post('/edit-film', function(request, response){
 	console.log("var editedFilm comes next:");
 	console.log(editedFilm._id);
 
-	Films.findOne({id: editedFilm.id}, function(err,film){
+	Films.findOne({_id: editedFilm.id}, function(err,film){
 		if(err){
 			console.log('error with edit-film find')
 		}else{
