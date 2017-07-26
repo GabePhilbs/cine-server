@@ -344,6 +344,7 @@ app.post('edit-film', function(request, response){
 			console.log('error with edit-film find')
 		}else{
 			 
+			 console.log("film found");
 			 console.log(film);
 
 			film.name = editedFilm.name
@@ -353,6 +354,7 @@ app.post('edit-film', function(request, response){
 			film.director = editedFilm.director
 			film.img = editedFilm.img
 
+			console.log("film edited");
 			console.log(film);
 
 			film.save(function(err){
