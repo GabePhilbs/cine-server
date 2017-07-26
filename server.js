@@ -353,25 +353,25 @@ app.post('/edit-film', function(request, response){
 			 console.log("film found");
 			 console.log(film);
 
-			// film.name = editedFilm.name
-			// film.summary = editedFilm.summary
-			// film.cast = editedFilm.cast
-			// film.decade = editedFilm.decade
-			// film.director = editedFilm.director
-			// film.img = editedFilm.img
+			film.name = editedFilm.name
+			film.summary = editedFilm.summary
+			film.cast = editedFilm.cast
+			film.decade = editedFilm.decade
+			film.director = editedFilm.director
+			film.img = editedFilm.img
 
-			// console.log("film edited");
-			// console.log(film);
+			console.log("film edited");
+			console.log(film);
 
-			// film.save(function(err){
-			// 	if(err){
-		 //        	response.send({"ERROR":"something went wrong"});
-			//     }else{
-			//     	console.log("not error")
-			//        	response.send(film);
-			//     }
+			film.save(function(err){
+				if(err){
+		        	response.send({"ERROR":"something went wrong"});
+			    }else{
+			    	console.log("not error")
+			       	response.send(film);
+			    }
 			    
-			// })	
+			})	
 
 
 			
