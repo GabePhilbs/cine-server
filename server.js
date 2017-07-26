@@ -335,7 +335,7 @@ app.post('/delete', function(request, response){
 });
 
 
-app.post('edit-film', function(request, response){
+app.post('/edit-film', function(request, response){
 
 	editedFilm = request.body;
 
