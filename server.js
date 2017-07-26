@@ -337,7 +337,13 @@ app.post('/delete', function(request, response){
 
 app.post('/edit-film', function(request, response){
 
+	console.log("request.body comes next:");
+	console.log(request.body);
+
 	editedFilm = request.body;
+
+	console.log("var editedFilm comes next:");
+	console.log(editedFilm);
 
 	Films.findOne({id: editedFilm.id}, function(err,film){
 		if(err){
