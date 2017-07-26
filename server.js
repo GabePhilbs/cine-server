@@ -335,6 +335,45 @@ app.post('/delete', function(request, response){
 });
 
 
+app.post('edit-film', function(request, response){
+
+	editedFilm = request.body;
+
+	Films.findOne({id: editedFilm.id}, function(err,film){
+		if(err){
+			console.log('error with edit-film find')
+		}else{
+			 
+			 console.log(film);
+
+			film.name = editedFilm.name
+			film.summary = editedFilm.summary
+			film.cast = editedFilm.cast
+			film.decade = editedFilm.decade
+			film.director = editedFilm.director
+			film.img = editedFilm.img
+
+			console.log(film);
+
+			film.save(function(err){
+				if(err){
+		        	response.send({"ERROR":"something went wrong"});
+			    }else{
+			    	console.log("not error")
+			       	response.send(film);
+			    }
+			    
+			})	
+
+
+			
+		}
+		
+	});
+
+
+});
+
 ////create new user
 // app.post('/new-user', function(request, response){
 
