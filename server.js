@@ -345,39 +345,39 @@ app.post('/edit-film', function(request, response){
 	console.log("var editedFilm comes next:");
 	console.log(editedFilm._id);
 
-	// Films.findOne({id: editedFilm.id}, function(err,film){
-	// 	if(err){
-	// 		console.log('error with edit-film find')
-	// 	}else{
+	Films.findOne({id: editedFilm.id}, function(err,film){
+		if(err){
+			console.log('error with edit-film find')
+		}else{
 			 
-	// 		 console.log("film found");
-	// 		 console.log(film);
+			 console.log("film found");
+			 console.log(film);
 
-	// 		film.name = editedFilm.name
-	// 		film.summary = editedFilm.summary
-	// 		film.cast = editedFilm.cast
-	// 		film.decade = editedFilm.decade
-	// 		film.director = editedFilm.director
-	// 		film.img = editedFilm.img
+			// film.name = editedFilm.name
+			// film.summary = editedFilm.summary
+			// film.cast = editedFilm.cast
+			// film.decade = editedFilm.decade
+			// film.director = editedFilm.director
+			// film.img = editedFilm.img
 
-	// 		console.log("film edited");
-	// 		console.log(film);
+			// console.log("film edited");
+			// console.log(film);
 
-	// 		film.save(function(err){
-	// 			if(err){
-	// 	        	response.send({"ERROR":"something went wrong"});
-	// 		    }else{
-	// 		    	console.log("not error")
-	// 		       	response.send(film);
-	// 		    }
+			// film.save(function(err){
+			// 	if(err){
+		 //        	response.send({"ERROR":"something went wrong"});
+			//     }else{
+			//     	console.log("not error")
+			//        	response.send(film);
+			//     }
 			    
-	// 		})	
+			// })	
 
 
 			
-	// 	}
+		}
 		
-	// });
+	});
 
 
 });
