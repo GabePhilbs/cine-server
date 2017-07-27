@@ -69,6 +69,7 @@ filmsSchema = new mongoose.Schema({
 	id : String,
 	name: String,
 	cast: String,
+	summary: String,
 	director: String,
 	img: String,
 	decade: String},
