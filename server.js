@@ -265,82 +265,14 @@ var filmDelName = '';
 var thisFilmDel = {};
 var thisDirDel = {};
 
-app.post('/delete', function(request, response){
 
-
-	console.log("posted to delete");
-	// console.log(request.body);
-	console.log(request.body.filmDel);
-
-	console.log(request.body.directorDel)
-
-
-	dirDelName = request.body.directorDel;
-	filmDelName = request.body.filmDel;
-
-	console.log(dirDelName);
-
-	console.log(filmDelName)
-
-	//find director
-	Directors.find({name: dirDelName}, function(err,director){
-		if(err){
-			console.log('error with this-director find')
-		}else{
-			 
-			if(director[0].name != null){
-				console.log(director);
-				thisDirDel = director[0];
-				console.log(thisDirDel);
-
-				thisDirDel.remove(function(err){
-					if(err){
-						console.log(" error")
-					}
-					console.log("removed");
-				});
-
-			}			
-		}
-		
-	});
-	//find film
-	console.log()
-	Films.find({name: filmDelName}, function(err,film){
-		if(err){
-			console.log('error with this-director find')
-		}else{
-			 
-			if(film[0].name != null){
-				console.log(film);
-				thisFilmDel = film[0];
-				console.log(thisFilmDel);
-
-				thisFilmDel.remove(function(err){
-					if(err){
-						console.log(" error")
-					}
-					console.log("removed");
-				});
-			}
-			
-		}
-		
-	});
-
-
-	
-
-
-
-});
 
 
 
 
 app.post('/delete-film', function(request, response){
 
-	if(request.boy.filmDel){
+	if(request.body.filmDel){
 		console.log("posted to delete");
 		// console.log(request.body);
 		console.log(request.body.filmDel);
