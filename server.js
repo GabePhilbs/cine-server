@@ -298,6 +298,7 @@ app.post('/delete-film', function(request, response){
 							console.log(" error")
 						}
 						console.log("removed");
+						response.send("deleted");
 					});
 				}
 				
@@ -341,6 +342,7 @@ app.post('/delete-director', function(request, response){
 							console.log(" error")
 						}
 						console.log("removed");
+						response.send("deleted");
 					});
 
 				}			
